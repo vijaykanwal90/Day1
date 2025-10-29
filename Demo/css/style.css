@@ -55,6 +55,13 @@ body {
   padding: 22px 0;
 }
 
+.heading-1 {
+  font-size: 64px;
+  font-weight: 600;
+  color: #4D4D4D;
+  line-height: 76px;
+}
+
 .heading-2 {
   font-size: 36px;
   font-weight: 600;
@@ -66,6 +73,12 @@ body {
   font-size: 28px;
   font-weight: 700;
   color: #4D4D4D;
+}
+
+.heading-4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #FFFFFF;
 }
 
 .text-center {
@@ -180,15 +193,13 @@ body {
   display: flex;
   justify-content: center;
   padding: 32px 144px;
-  margin: auto;
+  margin: 40px auto;
   box-sizing: border-box;
 }
 
 .customer-content {
   display: flex;
   flex-direction: column;
-  height: fit-content;
-  max-height: 324px;
   gap: 12px;
 }
 
@@ -197,7 +208,8 @@ body {
   height: 326px;
 }
 
-.customer-container span, h4 {
+.customer-container span,
+h4 {
   color: #4CAF4F;
 }
 
@@ -217,6 +229,113 @@ body {
 
 .meet-customer img {
   padding-top: 0px;
+}
+
+.demo-container {
+  background-color: bg-gray;
+  border: none;
+}
+
+.demo-button {
+  background-color: #4CAF4F;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  width: 160px;
+  padding: 0 14px;
+  height: 50px;
+  margin-top: 32px;
+}
+.demo-button img {
+  display: block;
+  width: 26px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-container {
+  color: white;
+  background-color: #263238;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 64px 165px;
+  margin-top: 40px;
+  gap: 125px;
+  height: 150px;
+}
+
+.footer-logo-image {
+  width: 137px;
+  height: 25px;
+}
+
+.footer-left-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.footer-company,
+.footer-support,
+.footer-newsletter {
+  display: flex;
+  flex-flow: column;
+  gap: 24px;
+}
+
+.footer-sociallinks ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-sociallinks ul li {
+  list-style: none;
+}
+
+.footer-company ul, .footer-support ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.footer-right-content {
+  display: flex;
+  gap: 30px;
+  color: white;
+  direction: row;
+  justify-content: center;
+}
+
+.footer-right-content input {
+  position: relative;
+  height: 40px;
+  width: 100%;
+  background-color: gray;
+  border-radius: 8px;
+  opacity: 20%;
+}
+.footer-right-content input::placeholder {
+  color: white;
+  padding-left: 12px;
+}
+
+.input-area {
+  position: relative;
+}
+
+.footer-send {
+  position: absolute;
+  right: 8px;
+  top: 11px;
 }
 
 /*# sourceMappingURL=style.css.map */
