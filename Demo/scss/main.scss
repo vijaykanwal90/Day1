@@ -1,5 +1,5 @@
-@import 'partials/variables';
-@import 'partials/mixins';
+@use 'partials/_variables' as *;
+@use 'partials/_mixins';
 
 * {
     margin: 0;
@@ -59,18 +59,24 @@ body {
     padding: 22px 0;
 }
 
-.heading-1 {
+.heading-2 {
     font-size: 36px;
-    font-weight: 500;
+    font-weight: 600;
+    color:$heading-color;
+    line-height: 44px;
 }
-
+.heading-3 {
+    font-size: 28px;
+    font-weight: 700;
+    color:$heading-color;
+}
 .text-center {
     text-align: center;
 }
 
 .para {
     font-size: 16px;
-    color: #717171;
+    color: $para-color;
 }
 
 .care-desc {
@@ -87,7 +93,10 @@ body {
     position: relative;
     width: 368px;
 }
-
+.care-image{
+    width: 368px;
+    height:286px;
+}
 .care-text {
     position: absolute;
     background: #F5F7FA;
@@ -97,8 +106,9 @@ body {
     top: 68%;
     border-radius: 6px;
     text-align: center;
-    padding: 45px;
+    padding: 36px;
     box-sizing: border-box;
+    color: $para-color;
 }
 
 .care-image-wrapper {
@@ -106,4 +116,117 @@ body {
     align-items: center;
     justify-content: space-around;
     padding: 50px 0px;
+}
+.care-readmore-section {
+    display: inline-flex;
+    align-items: center;
+     &::before {
+    content: "Readmore";
+    color: $primary-brand-color;
+    // position: absolute;
+    // bottom: 10px;
+    // left: 10px;
+    
+    // padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  img {
+    display: inline;
+    width: 24px;
+  }
+}
+// before and after won't work on the replaced element 
+// .care-readmore-section img{
+//     &::before{
+//         content: "Readmore";
+//         color: $primary-brand-color;
+//     }
+// }
+.client-container{
+    padding-top: 40px;
+}
+.community-header{
+    margin: 32px auto;
+    width: 542px;
+    height:88px;
+}
+.community-container{
+    padding: 40px;
+
+}
+.community-box-parent{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+
+}
+.community-box{
+    height: 200px;
+    max-height: 260px;
+    width: 299px;
+    padding: 24px 32px;
+    box-shadow: 0px 2px 4px 0px rgba(171,190,209,0.2);
+
+}
+.logos-container img{
+    width: 30px;
+    height: 30px;
+}
+.logos-container{
+    width: 100%;
+    height: 98px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.customer-container{
+    background-color: $bg-gray;
+   display: flex;
+   justify-content: center;
+    padding: 32px 144px;
+    margin: auto;
+    box-sizing: border-box;
+
+    
+}
+.customer-content{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    max-height: 324px;
+    gap: 12px;
+    // align-items: center;
+    // justify-content: space-between;
+}
+.customer-logo img{ 
+ width: 326px;
+ height:326px;
+}
+.customer-container span,h4 {
+    color: $primary-brand-color;
+}
+.customer-container ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    li{
+        list-style: none;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+    }
+}
+.meet-customer span{
+    display: inline-flex;
+    align-items: center;
+}
+.meet-customer img{
+
+    padding-top: 0px;
 }
