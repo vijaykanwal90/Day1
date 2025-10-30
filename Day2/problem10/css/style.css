@@ -1,0 +1,19 @@
+* {
+  margin: 10px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.table-heading {
+  border: 2px solid black;
+  padding: 4px 4px;
+}
+
+.table-heading th {
+  border: 2px solid black;
+  padding: 4px 8px;
+}
+
+/*# sourceMappingURL=style.css.map */
