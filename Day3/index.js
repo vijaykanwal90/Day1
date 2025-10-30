@@ -1,24 +1,24 @@
-// var products = [
-//     {
-//         "name":"Product1",
-//         "price":"100",
-//         "category":"category1"
-//     },
-//     {
-//         "name":"Product2",
-//         "price":"1234",
-//         "category":"category2"
-//     },
-//     {
-//         "name":"Product3",
-//         "price":"1234",
-//         "category":"category3"
-//     },{
-//         "name":"Product4",
-//         "price":"80",
-//         "category":"category4"
-//     }
-// ]
+var productsData = [
+    {
+        "name":"Product1",
+        "price":100,
+        "category":"category1"
+    },
+    {
+        "name":"Product2",
+        "price":1234,
+        "category":"category2"
+    },
+    {
+        "name":"Product3",
+        "price":1234,
+        "category":"category3"
+    },{
+        "name":"Product4",
+        "price":80,
+        "category":"category4"
+    }
+]
 var discountPercentage = 10;
 function Product(name , price,category){
     this.name = name;
@@ -53,7 +53,7 @@ function displayData(products){
         productBox.innerHTML= `<h2>${product.name}</h1>`;
 
         productBox.innerHTML+= `<p class='original-price'>${product.price}</p>`;
-        productBox.innerHTML+= `<p class='discount-price'>Cost{discountPrice}</p>`;
+        productBox.innerHTML+= `<p class='discount-price'>${discountPrice}</p>`;
 
         productBox.innerHTML+= `<p>${product.category}</p>`;
         
@@ -80,13 +80,19 @@ function mouseEvent(){
     })
 }
 function main(){
-    var product1 = new Product('product1',100,'category1');
-    var product2 = new Product('product2',200,'category2');
-    var product3 = new Product('product3',1234,'category3');
-    var product4 = new Product('product4',400,'category4');
-    
-    var products = [product1,product2,product3,product4]
+    // hardcoded way for smalldata set 
+    // var product1 = new Product('product1',100,'category1');
+    // var product2 = new Product('product2',200,'category2');
+    // var product3 = new Product('product3',1234,'category3');
+    // var product4 = new Product('product4',400,'category4');
+    // var products = [product1,product2,product3,product4]
 
+    // Creating product objects using map 
+    var products= productsData.map((product)=>{
+        
+        return new Product(product.name,product.price,product.category)
+    })
+   
     
     Product.prototype.getDiscountedPrice = function(discountPercentage){
       var discountPrice = (this.price * discountPercentage)/100;
