@@ -1,0 +1,21 @@
+const products = [
+    {
+        "name":"Product1",
+        "price":"100",
+        "category":"category1"
+    },
+    {
+        "name":"Product2",
+        "price":"1234",
+        "category":"category2"
+    },
+    {
+        "name":"Product3",
+        "price":"320",
+        "category":"category3"
+    },{
+        "name":"Product4",
+        "price":"80",
+        "category":"category4"
+    }
+]
